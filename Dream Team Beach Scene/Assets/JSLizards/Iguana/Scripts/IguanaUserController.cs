@@ -3,8 +3,12 @@ using System.Collections;
 
 public class IguanaUserController : MonoBehaviour {
 	IguanaCharacter iguanaCharacter;
-	
-	void Start () {
+
+
+    [SerializeField]
+    private float speed = 5f;
+
+    void Start () {
 		iguanaCharacter = GetComponent < IguanaCharacter> ();
 	}
 	
@@ -37,6 +41,8 @@ public class IguanaUserController : MonoBehaviour {
 	{
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
-		iguanaCharacter.Move (v,h);
+        v = v * speed;
+        h *= speed;
+		iguanaCharacter.Move (v,-h);
 	}
 }
