@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         Vector3 moveHorz = transform.right * xMove; //(1,0,0) rotate about x
         Vector3 moveVert = transform.forward * zMove; //(0,0,1) rotate about z
 
-        //fianl movement vector
+        //final movement vector
         Vector3 velocity = (moveHorz + moveVert).normalized * speed;
 
         //apply movement

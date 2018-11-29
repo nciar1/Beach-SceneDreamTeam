@@ -3,6 +3,7 @@ using System.Collections;
 
 public class IguanaCharacter : MonoBehaviour {
 	Animator iguanaAnimator;
+
 	
 	void Start () {
 		iguanaAnimator = GetComponent<Animator> ();
